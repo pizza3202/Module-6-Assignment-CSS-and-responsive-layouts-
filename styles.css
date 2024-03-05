@@ -129,94 +129,99 @@ nav ul li {
 .flexbox-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
-    gap: 20px;
+    justify-content: space-around; 
+    gap: 20px; 
 }
-
 .flexbox-item {
-    flex: 1 0 calc(50% - 20px);
-    max-width: calc(50% - 20px);
-    width: 90%;
+    flex: 0 1 calc(40% - 20px); 
     box-sizing: border-box;
-    margin: 5%;
+    margin: 10px; 
     border: 3px solid #7fbd5b;
     background: #7fbd5b;
     color: black;
-    min-height: 150px;
-    display: flex;  
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
-    font-weight: bold;
-    padding: 10px;
-}
-.flexbox-container a {
-    flex: 0 1 calc(50% - 20px);
-    max-width: calc(50% - 20px);
-    box-sizing: border-box;
-    margin: 10px;
-    border: 3px solid #7fbd5b;
-    background: #7fbd5b;
-    color: black;
-    min-height: 150px;
+    min-height: 150px; 
+    text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
-    text-decoration: none;
-    font-weight: bold;
-    padding: 10px;
+    padding: 10px; 
+}
+
+  
+.flexbox-item a {
+    color: black;
+    text-decoration: none; 
+    display: block; 
+    width: 100%; 
 }
 .flexbox-item, .flexbox-item a {
     font-weight: bold;
+    text-decoration: none;
+}
+.flexbox-container .flexbox-item {
+    flex: 0 1 calc(40% - 20px);
+    margin: 10px;
+    border: 3px solid #7fbd5b;
+    background: #7fbd5b !important; 
+    color: black;
+    min-height: 150px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
 }
 .copyinfo {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-between; 
     align-items: center;
     padding: 1em 2em;
     margin-left: auto;
     margin-right: auto;
     max-width: 1200px;
-    gap: 20px;
+    gap: 5px; 
     font-size: 18px;
 }
 .reserve-button {
-    background-color: lightgray;
     font-size: 15px;
     font-weight: bold;
+    margin-left: 5px; 
+    padding: 10px;
+}
+.reserve-button button {
+    padding: 0.5em 1em; 
 }
 .bookinfo {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: flex-start;
     padding: 1em;
-    gap: 20px;
 }
 .bookimage {
+    flex: 0 1 50%; 
     margin-right: 20px;
-    width: auto;
-    height: 400px;
-    background-color: lightgray;
+    height: 400px; 
+    background-color: lightgray; 
 }
 .bookdetails {
+    flex: 0 1 50%; 
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
     justify-content: space-evenly;
-    max-width: 60%;
+}
+.bookdetails > div {
+    margin-bottom: 90px; 
+}
+.book-name h2, .book-description strong {
+    font-weight: bold; 
 }
 .misc {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    background-color: lightgray;
+    background-color: lightgray; 
     padding: 1em 2em;
-    margin-top: 1.5em;
-    margin-bottom: 2em;
-    margin-left: 2em;
-    margin-right: 2em;
+    margin: 1.5em 2em; 
+    font-size: 18px; 
 }
 .bookinfo, .misc {
     margin-left: auto;
@@ -226,18 +231,20 @@ nav ul li {
 .bookdetails, .about-bookinfo, .reader-reviews {
     padding-left: 20px;
 }
-.about-heading, .reviewers-heading {
-    margin-right: 20px;
-    font-size: 18px;
-    font-weight: bold;
-    flex-shrink: 0;
+.reader-reviews ol {
+    padding-left: 20px; 
+}
+.about-heading, .reviews-heading {
+    font-size: 24px; 
+    font-weight: bold; 
+    margin-bottom: 20px; 
 }
 .about-bookinfo, .reader-reviews ul li {
     margin: 0 0 10px 0;
     font-size: 18px;
     white-space: nowrap;
 }
-.footer {
+footer {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -246,95 +253,144 @@ nav ul li {
     background-color: lightgray;
     font-size: 12px;
 }
-.footer a {
+footer a {
     color:black;
+
+    text-decoration: none;
 }
-@media only screen and (min-width: 768px) {
+@media screen and (max-width: 768px) {
     .site-header {
-        padding: 1em 2em;
+        flex-direction: row; 
+        flex-wrap: nowrap;
+        align-items: center; 
+        padding: 1em; 
+        list-style-type: none;
+    }
+    .site-header h1 {
+        font-size: 1.2em;
+        margin-right: 20px;
+        white-space: nowrap;
+    }
+  
+    .header-group {
+        flex-wrap: nowrap; 
+        justify-content: center; 
+        gap: 0.5em; 
+        width: 100%; 
+    }
+  
+    .home-icon, .search-bar, .login {
+        width: 100%; 
+        margin-bottom: 0.5em; 
     }
 
+    .navigation ul {
+        flex-direction: row; 
+        align-items: center; 
+        padding: 0;
+        list-style-type: none;
+    }
+  
+    .navigation li {
+        padding: 0.5em;
+    }
+    .navigation a {
+        padding: 8px 16px; 
+        width: 100%; 
+        text-align: center; 
+    }
+    .flexbox-item {
+        flex-basis: 100%;
+        max-width: 100%;
+        margin: 10px 0;
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .site-header {
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        padding: 1em 2em; 
+    }
+    .site-header h1 {
+        font-size: 1.2em;
+        margin-right: 20px;
+        white-space: nowrap;
+    }
+  
     .header-group {
         display: flex;
         flex-direction: row;
-        flex-wrap: nowrap;
         align-items: center;
         justify-content: space-between;
         gap: 1em;
     }
 
-    .site-header h1 {
-        font-size: 1.5em;
+    .search-bar input[type="search"] {
+        width: auto;
+        flex-grow: 1;
     }
 
+    .search-bar button {
+        white-space: nowrap;
+    }
     nav ul {
         flex-direction: row;
         justify-content: space-around;
         padding-left: 0;
     }
-
+  
     .navigation a {
-        padding: 0.5em 1em; 
+        padding: 0.5em 1em;
     }
-
+  
     .navigation li {
         padding: 0.5em;
         margin: 0;
     }
-
-    .flexbox-container {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        gap: 20px;
-    }
-
     .flexbox-item {
-        flex: 0 1 calc(50% - 20px);
-        max-width: calc(50% - 20px);
-        margin: 10px;
-        border: 3px solid #7fbd5b;
-        background: #7fbd5b;
-        color: black;
-        min-height: 150px;
-        justify-content: center;
-        align-items: center;
-        text-decoration: none;
-        font-weight: bold;
-        padding: 10px;
+        flex-basis: 50%;
     }
-}
-@media (max-width: 1024px) {
-    .navigation li a {
-        padding: 0.5em 1em; 
-    }
-
-    .navigation li {
-        padding: 0 1em;
-    }
-
-    .flexbox-item {
-        flex-basis: 50%; 
-    }
-}
-@media (max-width: 480px) {
+  }
+  
+  @media (max-width: 480px) {
     .site-header, .navigation, .new-arrivals, .main, .misc, .footer {
-        padding: 1em;
+      padding: 1em; 
     }
-
-    .site-header h1, .navigation a, .footer { 
-        font-size: 14px;
+  
+    .site-header h1, .navigation a, .footer {
+      font-size: 14px; 
     }
-
+  
     .copyinfo, .bookinfo, .misc {
-        flex-direction: column;
+      flex-direction: column;
+      gap: 20px; 
     }
-
-    .copyinfo {
-        gap: 20px;
+  
+    .navigation li {
+      padding: 0.5em;
+      margin: 0; 
     }
-
+  
+    .navigation a {
+      padding: 0.5em 1em;
+    }
+  
+    .flexbox-container {
+      justify-content: center;
+    }
+  
+    .flexbox-item {
+      flex: 0 1 100%; 
+      max-width: 100%;
+      margin: 10px 0; 
+    }
+  
     .reserve-button {
-        padding: 10px;
+      padding: 10px; 
     }
-}
+    .flexbox-item {
+        flex-basis: 100%;
+        max-width: 100%;
+        margin: 10px 0;
+    }
+  }
