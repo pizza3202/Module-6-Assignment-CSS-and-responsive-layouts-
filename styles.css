@@ -6,6 +6,11 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
 }
+.wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
 .site-header {
     background-color: #309BD8;
     color: white;
@@ -247,6 +252,7 @@ nav ul li {
 footer {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     padding: 20px;
@@ -255,10 +261,16 @@ footer {
 }
 footer a {
     color:black;
-
+    margin: 0 10px;
     text-decoration: none;
 }
+footer p {
+    margin-right: 10px;
+}
 @media screen and (max-width: 768px) {
+    .wrapper {
+        padding: 0 10px;
+    }
     .site-header {
         display: flex;
         flex-direction: column; 
@@ -313,6 +325,14 @@ footer a {
         flex-basis: 100%;
         max-width: 100%;
         margin: 10px 0;
+    }
+    footer {
+        justify-content: center;
+        text-align: center;
+    }
+    footer a, footer p {
+        margin-bottom: 10px;
+        display: block;
     }
 }
 @media screen and (min-width: 768px) and (max-width: 1024px) {

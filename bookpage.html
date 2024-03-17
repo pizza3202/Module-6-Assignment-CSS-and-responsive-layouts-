@@ -7,78 +7,84 @@
     </head>
     <body>
         <header class="site-header">
-            <h1>Welcome to The Vallejo Public Library</h1>
-            <div class="header-group">
-                <div class="home-icon">
-                    <a href="index.html">Home</a>
-                </div>
-                <div class="search-bar">
-                    <form action="#">
-                        <input type="search" name="search" placeholder="Search">
-                        <button type="submit">Search</button>
-                    </form>
-                </div>
-                <div class="login">
-                    <a href="login.html">Log in</a>
+            <div class="wrapper">
+                <h1>Welcome to The Vallejo Public Library</h1>
+                <div class="header-group">
+                    <div class="home-icon">
+                        <a href="index.html">Home</a>
+                    </div>
+                    <div class="search-bar">
+                        <form action="#">
+                            <input type="search" name="search" placeholder="Search">
+                            <button type="submit">Search</button>
+                        </form>
+                    </div>
+                    <div class="login">
+                        <a href="login.html">Log in</a>
+                    </div>
                 </div>
             </div>
         </header>
         <nav class="navigation">
-            <ul>
-                <li><a href="catalog.html">Catalog</a></li>
-                <li><a href="card.html">Get a Library Card</a></li>
-                <li><a href="Services.html">Services</a></li>
-                <li><a href="contact-us.html">Contact Us</a></li>
-            </ul>
+                <ul>
+                    <li><a href="catalog.html">Catalog</a></li>
+                    <li><a href="card.html">Get a Library Card</a></li>
+                    <li><a href="Services.html">Services</a></li>
+                    <li><a href="contact-us.html">Contact Us</a></li>
+                </ul>
         </nav>
         <main>
-            <article class="bookinfo">
-                <img class="bookimage" src="pexels-photo-2008136.jpeg" alt="Book Cover for Cupcakes and Confessions" width="350" height="400">
-                <div class="bookdetails">
-                    <div class="book-name">
-                        <h2>Book Name: Cupcakes and Confessions</h2>
+            <div class="wrapper">
+                <article class="bookinfo">
+                    <img class="bookimage" src="https://images.pexels.com/photos/2008136/pexels-photo-2008136.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Book Cover for Cupcakes and Confessions" width="350" height="400">
+                    <div class="bookdetails">
+                        <div class="book-name">
+                            <h2>Book Name: Cupcakes and Confessions</h2>
+                        </div>
+                        <div class="book-description">
+                            <strong>Description: In "Cupcakes and Confessions", Jamie, an aspiring pastry chef, falls in love with Alex, a critical food critic, at a bakery contest........</strong>
+                        </div>
                     </div>
-                    <div class="book-description">
-                        <strong>Description: In "Cupcakes and Confessions", Jamie, an aspiring pastry chef, falls in love with Alex, a critical food critic, at a bakery contest........</strong>
+                </article>
+                <section class="misc about-section">
+                    <h2 class="about-heading">About</h2>
+                    <div class="about-bookinfo">
+                        <p><strong>Author</strong>: Jane Doe</p>
+                        <p><strong>Category</strong>: Romantic comedy</p>
+                        <p><strong>Published</strong>: <time>2023</time></p>
                     </div>
-                </div>
-            </article>
-            <section class="misc about-section">
-                <h2 class="about-heading">About</h2>
-                <div class="about-bookinfo">
-                    <p><strong>Author</strong>: Jane Doe</p>
-                    <p><strong>Category</strong>: Romantic comedy</p>
-                    <p><strong>Published</strong>: <time>2023</time></p>
-                </div>
-            </section>
-            <section class="misc reviews-section">
-                <h2 class="reviews-heading">Reviews</h2>
-                <div class="reader-reviews">
-                    <ol>
-                        <li>This is book is amazing, it has funny content and well-structured story. Highly recommended!</li>
-                        <li>Love this book! I've read all Jane Doe's books, this is another worth-reading book from her</li>
-                        <li>Must read! Loved the story.</li>
-                        <li>Fantastic!</li>
-                        <li>¡Libro maravilloso!</li>
-                        <li>..........</li>
-                    </ol>
-                </div>
-            </section>
-            <section class="copyinfo">
-                <div class="copies">
-                    <p>Total Copies: 5</p>
-                    <p>Available Copies: 2</p>
-                </div>
-                <div class="reserve-button">
-                    <button>Reserve</button>
-                </div>
-            </section>
+                </section>
+                <section class="misc reviews-section">
+                    <h2 class="reviews-heading">Reviews</h2>
+                    <div class="reader-reviews">
+                        <ol>
+                            <li>This is book is amazing, it has funny content and well-structured story. Highly recommended!</li>
+                            <li>Love this book! I've read all Jane Doe's books, this is another worth-reading book from her</li>
+                            <li>Must read! Loved the story.</li>
+                            <li>Fantastic!</li>
+                            <li>¡Libro maravilloso!</li>
+                            <li>..........</li>
+                        </ol>
+                    </div>
+                </section>
+                <section class="copyinfo">
+                    <div class="copies">
+                        <p>Total Copies: 5</p>
+                        <p>Available Copies: 2</p>
+                    </div>
+                    <div class="reserve-button">
+                        <button>Reserve</button>
+                    </div>
+                </section>
+            </div>
         </main>
         <footer>
-            <p>Contact us at <a href="mailto:info@vallejopubliclib.org">info@vallejopubliclib.org"</a></p>
-            <a href="faqs.html">FAQs</a>
-            <a href="support-us.html">Support Us</a>
-            <a href="volunteer-opportunity.html">Volunteer Opportunity</a>
+            <div class="wrapper">
+                <p>Contact us at <a href="mailto:info@vallejopubliclib.org">info@vallejopubliclib.org</a></p>
+                <a href="faqs.html">FAQs</a>
+                <a href="support-us.html">Support Us</a>
+                <a href="volunteer-opportunity.html">Volunteer Opportunity</a>
+            </div>
         </footer>
     </body>
 </html>
